@@ -1,0 +1,95 @@
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 dark:from-primary-800 dark:via-primary-900 dark:to-secondary-900 text-white py-20 lg:py-32 transition-all duration-500">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-white bg-opacity-5"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <div class="text-center animate-fade-in-up">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center justify-center space-x-2 text-primary-200">
+          <li><a routerLink="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li><a routerLink="/knowledge" class="hover:text-white transition-colors">Knowledge Hub</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-white">Resources</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl lg:text-6xl font-bold mb-6">📚 Resources & Downloads</h1>
+      <p class="text-xl lg:text-2xl text-primary-100 max-w-3xl mx-auto">
+        Free financial resources, templates, and guides to help your business succeed
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Category Filter -->
+<section class="section-padding bg-white dark:bg-secondary-900 transition-colors duration-500">
+  <div class="container-custom">
+    <div class="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
+      <button *ngFor="let category of categories"
+              (click)="filterByCategory(category.id)"
+              [class]="selectedCategory === category.id ?
+                'bg-primary-600 text-white' :
+                'bg-secondary-100 dark:bg-secondary-700 text-secondary-700 dark:text-secondary-300 hover:bg-primary-100 dark:hover:bg-primary-900/30'"
+              class="px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+        {{ category.name }} ({{ category.count }})
+      </button>
+    </div>
+
+    <!-- Resources Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let resource of filteredResources; let i = index"
+           class="card hover-lift animate-fade-in-up"
+           [style.animation-delay]="(0.1 + i * 0.05) + 's'">
+
+        <!-- Resource Icon -->
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white text-2xl shadow-lg">
+            {{ resource.icon }}
+          </div>
+        </div>
+
+        <!-- Resource Content -->
+        <div class="space-y-4">
+          <!-- Type & Featured Badge -->
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm transition-colors duration-300">
+              {{ getTypeIcon(resource.type) }} {{ resource.type | titlecase }}
+            </span>
+            <span *ngIf="resource.featured" class="px-2 py-1 bg-accent-500 text-white rounded-full text-xs font-medium">
+              ⭐ Featured
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-bold text-secondary-800 dark:text-white transition-colors duration-300">
+            {{ resource.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+            {{ resource.description }}
+          </p>
+
+          <!-- Meta Info -->
+          <div class="flex items-center justify-between text-sm text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+            <span>{{ resource.size }}</span>
+            <span>{{ resource.downloads }} downloads</span>
+          </div>
+
+          <!-- Download Button -->
+          <button (click)="downloadResource(resource)"
+                  class="w-full btn-primary flex items-center justify-center space-x-2 hover:shadow-lg transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Download Now</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

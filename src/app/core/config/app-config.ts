@@ -58,7 +58,7 @@ export interface AppConfig {
 
 export const APP_CONFIG: AppConfig = {
   branding: {
-    companyName: 'Excellence CA & Associates',
+    companyName: 'Patra & Associates',
     tagline: 'Your Trusted Financial Partner',
     logo: 'assets/images/logo.png',
     favicon: 'assets/images/favicon.ico',
@@ -67,18 +67,19 @@ export const APP_CONFIG: AppConfig = {
     accentColor: '#f37316'
   },
   contact: {
-    phone: '+91-9876543210',
-    email: 'info@excellenceca.com',
-    address: '123 Business District, Financial Plaza',
-    city: 'Mumbai',
-    state: 'Maharashtra',
-    zipCode: '400001',
+    phone: '+91-9040529121',
+    email: 'info@patraassociates.com',
+    address: 'Udala, Mayurbhanj',
+    city: 'Udala',
+    state: 'Odisha',
+    zipCode: '757041',
     country: 'India',
     socialMedia: {
-      linkedin: 'https://linkedin.com/company/excellence-ca',
+      linkedin: 'https://linkedin.com/company/patraassociates',
       twitter: 'https://twitter.com/excellenceca',
       facebook: 'https://facebook.com/excellenceca',
-      instagram: 'https://instagram.com/excellenceca'
+      instagram: 'https://instagram.com/excellenceca',
+      youtube: 'https://youtube.com/@excellenceca'
     }
   },
   business: {

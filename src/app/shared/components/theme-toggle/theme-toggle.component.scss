@@ -1,0 +1,100 @@
+// Theme toggle component styles
+
+.theme-toggle {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  &:hover::before {
+    transform: translateX(100%);
+  }
+
+  // Glow effect on hover
+  &:hover {
+    box-shadow:
+      0 0 20px rgba(37, 99, 235, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  // Dark mode glow
+  .dark &:hover {
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.4),
+      0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Enhanced toggle circle animation
+.toggle-circle {
+  &.light-mode {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    box-shadow:
+      0 2px 8px rgba(251, 191, 36, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  &.dark-mode {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow:
+      0 2px 8px rgba(59, 130, 246, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Icon animations
+.theme-icon {
+  &.sun-icon {
+    animation: rotate 8s linear infinite;
+  }
+
+  &.moon-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+// Accessibility improvements
+.theme-toggle:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: var(--primary-500);
+  ring-offset: 2px;
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .toggle-circle,
+  .theme-icon {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

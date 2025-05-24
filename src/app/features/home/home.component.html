@@ -1,202 +1,435 @@
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
-  <!-- Background Pattern -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute inset-0 bg-white bg-opacity-5"></div>
+<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 dark:from-primary-800 dark:via-primary-900 dark:to-secondary-900 text-white overflow-hidden transition-all duration-500 min-h-screen flex items-center">
+  <!-- Advanced Background Effects -->
+  <div class="absolute inset-0">
+    <!-- Animated Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-700/95 to-primary-800/90 dark:from-primary-800/95 dark:via-primary-900/90 dark:to-secondary-900/95"></div>
+
+    <!-- Geometric Pattern -->
+    <div class="absolute inset-0 opacity-10 dark:opacity-5">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%);"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-2 h-2 bg-accent-400 rounded-full opacity-60 animate-float"></div>
+      <div class="absolute top-40 right-20 w-3 h-3 bg-accent-300 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-32 left-20 w-1 h-1 bg-white rounded-full opacity-50 animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-20 right-32 w-2 h-2 bg-accent-500 rounded-full opacity-30 animate-float" style="animation-delay: 3s;"></div>
+      <div class="absolute top-60 left-1/3 w-1 h-1 bg-white rounded-full opacity-40 animate-float" style="animation-delay: 4s;"></div>
+    </div>
   </div>
 
   <div class="container-custom relative z-10 py-20 lg:py-32">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <!-- Hero Content -->
-      <div class="text-center lg:text-left">
-        <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-          Professional
-          <span class="text-gradient bg-gradient-to-r from-accent-400 to-accent-300 bg-clip-text text-transparent">
+      <div class="text-center lg:text-left animate-fade-in-up">
+        <!-- Professional Badge -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-full text-accent-300 text-sm font-medium mb-6 border border-white/20 animate-fade-in-up">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Trusted Financial Partner
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
+          <span class="block text-white mb-2">Professional</span>
+          <span class="block text-gradient bg-gradient-to-r from-accent-400 via-accent-300 to-accent-200 bg-clip-text text-transparent animate-glow">
             Chartered Accountant
           </span>
-          Services
+          <span class="block text-white">Services</span>
         </h1>
 
-        <p class="text-xl lg:text-2xl text-primary-100 mb-8 leading-relaxed">
-          {{ tagline }} - Providing expert financial solutions for individuals and businesses with over 15 years of experience.
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-primary-100 dark:text-primary-200 mb-10 leading-relaxed max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s;">
+          <span class="font-semibold text-accent-300">{{ tagline }}</span> - Providing expert financial solutions for individuals and businesses with over 15 years of experience.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-          <a routerLink="/contact" class="btn-primary text-lg px-8 py-4">
-            Get Free Consultation
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12 animate-fade-in-up" style="animation-delay: 0.3s;">
+          <a routerLink="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 rounded-xl shadow-lg hover:shadow-xl hover:shadow-accent-500/25 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+            <span class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span class="relative">Get Free Consultation</span>
           </a>
-          <a routerLink="/services" class="btn-outline border-white text-white hover:bg-white hover:text-primary-600 text-lg px-8 py-4">
-            Our Services
+          <a routerLink="/services" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 hover:border-white hover:bg-white hover:text-primary-600 rounded-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Our Services</span>
           </a>
         </div>
 
-        <!-- Trust Indicators -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-primary-200">
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-accent-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            Certified CA
+        <!-- Enhanced Trust Indicators -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-8 animate-fade-in-up" style="animation-delay: 0.4s;">
+          <div class="group flex items-center px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm">Certified CA</div>
+              <div class="text-primary-200 text-xs">ICAI Licensed</div>
+            </div>
           </div>
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-accent-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            15+ Years Experience
+
+          <div class="group flex items-center px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm">15+ Years</div>
+              <div class="text-primary-200 text-xs">Experience</div>
+            </div>
           </div>
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-accent-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            500+ Happy Clients
+
+          <div class="group flex items-center px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm">500+ Clients</div>
+              <div class="text-primary-200 text-xs">Satisfied</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Hero Image/Illustration -->
-      <div class="relative">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div class="grid grid-cols-2 gap-4">
-            <div *ngFor="let stat of heroStats" class="text-center p-4 bg-white/10 rounded-lg">
-              <div class="text-2xl lg:text-3xl font-bold text-accent-400">{{ stat.number }}</div>
-              <div class="text-sm text-primary-200">{{ stat.label }}</div>
+      <!-- Enhanced Hero Stats -->
+      <div class="relative animate-fade-in-right">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl"></div>
+        <div class="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-accent-400/20 to-accent-500/10 rounded-full blur-xl animate-pulse-slow"></div>
+        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-accent-300/15 to-accent-400/5 rounded-full blur-lg animate-pulse-slow" style="animation-delay: 1s;"></div>
+
+        <!-- Main Stats Container -->
+        <div class="relative bg-white/10 dark:bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl shadow-black/10 hover:shadow-black/20 transition-all duration-500 hover:-translate-y-2">
+          <!-- Header -->
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center px-4 py-2 bg-accent-500/20 rounded-full text-accent-300 text-sm font-medium mb-4">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Our Achievements
             </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Trusted by Hundreds</h3>
+            <p class="text-primary-200 text-sm">Excellence in every number</p>
+          </div>
+
+          <!-- Enhanced Stats Grid -->
+          <div class="grid grid-cols-2 gap-6">
+            <div *ngFor="let stat of heroStats; let i = index"
+                 class="group relative text-center p-6 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-1 animate-scale-in"
+                 [style.animation-delay]="(0.5 + i * 0.1) + 's'">
+
+              <!-- Stat Icon -->
+              <div class="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" *ngIf="i === 0">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" *ngIf="i === 1">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" *ngIf="i === 2">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" *ngIf="i === 3">
+                  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+
+              <!-- Stat Number -->
+              <div class="text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:text-accent-300 transition-colors duration-300 animate-pulse-slow">
+                {{ stat.number }}
+              </div>
+
+              <!-- Stat Label -->
+              <div class="text-sm font-medium text-primary-200 group-hover:text-white transition-colors duration-300">
+                {{ stat.label }}
+              </div>
+
+              <!-- Hover Effect Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-br from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Action -->
+          <div class="mt-8 text-center">
+            <a routerLink="/about" class="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+              <span>View Our Story</span>
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
           </div>
         </div>
 
-        <!-- Floating Elements -->
-        <div class="absolute -top-4 -right-4 w-20 h-20 bg-accent-400 rounded-full opacity-20 animate-bounce-slow"></div>
-        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-accent-300 rounded-full opacity-30 animate-bounce-slow" style="animation-delay: 1s;"></div>
+        <!-- Enhanced Floating Elements -->
+        <div class="absolute -top-6 -right-6 w-4 h-4 bg-accent-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-6 -left-6 w-3 h-3 bg-accent-300 rounded-full opacity-50 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/3 -left-4 w-2 h-2 bg-white rounded-full opacity-40 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-1/3 -right-4 w-2 h-2 bg-accent-500 rounded-full opacity-30 animate-float" style="animation-delay: 3s;"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Services Section -->
-<section class="section-padding bg-secondary-50">
-  <div class="container-custom">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-secondary-800 mb-4">
+<section class="section-padding bg-gradient-to-br from-secondary-50 via-white to-primary-50/30 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/30 transition-colors duration-500 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5 dark:opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-100 via-transparent to-accent-100 dark:from-primary-900 dark:to-accent-900"></div>
+    <div class="absolute top-20 left-20 w-32 h-32 bg-primary-200 dark:bg-primary-800 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-accent-200 dark:bg-accent-800 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <!-- Enhanced Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-600 dark:text-primary-400 text-sm font-medium mb-6 transition-colors duration-300">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+        </svg>
         Our Core Services
+      </div>
+      <h2 class="text-4xl lg:text-6xl font-bold text-secondary-800 dark:text-white mb-6 leading-tight transition-colors duration-300">
+        Professional <span class="text-gradient bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Financial Solutions</span>
       </h2>
-      <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
-        Comprehensive financial solutions tailored to meet your business and personal needs
+      <p class="text-xl lg:text-2xl text-secondary-600 dark:text-secondary-300 max-w-4xl mx-auto leading-relaxed transition-colors duration-300">
+        Comprehensive financial solutions tailored to meet your business and personal needs with expert guidance and modern technology
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div *ngFor="let service of coreServices" class="card group hover:scale-105 transition-transform duration-300">
-        <div class="text-center">
-          <div class="text-4xl mb-4">{{ service.icon }}</div>
-          <h3 class="text-xl font-semibold text-secondary-800 mb-3">{{ service.title }}</h3>
-          <p class="text-secondary-600 mb-4">{{ service.description }}</p>
+    <!-- Enhanced Service Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <div *ngFor="let service of coreServices; let i = index"
+           class="group relative bg-white/70 dark:bg-secondary-800/70 backdrop-blur-sm rounded-3xl p-8 border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-500 hover:-translate-y-3 animate-fade-in-up overflow-hidden"
+           [style.animation-delay]="(0.2 + i * 0.1) + 's'">
 
-          <ul class="text-sm text-secondary-500 space-y-1 mb-6">
-            <li *ngFor="let feature of service.features" class="flex items-center">
-              <svg class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-              </svg>
-              {{ feature }}
-            </li>
-          </ul>
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-accent-50/50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          <a routerLink="/services" class="text-primary-600 hover:text-primary-700 font-medium group-hover:underline transition-colors duration-200">
-            Learn More →
-          </a>
+        <!-- Floating Elements -->
+        <div class="absolute -top-2 -right-2 w-4 h-4 bg-accent-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-primary-400 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center">
+          <!-- Enhanced Icon -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 rounded-2xl flex items-center justify-center text-white text-4xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border-4 border-white dark:border-secondary-700">
+              {{ service.icon }}
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-br from-primary-400 to-accent-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Service Info -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">{{ service.title }}</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">{{ service.description }}</p>
+
+            <!-- Features List -->
+            <div class="space-y-3">
+              <ul class="text-sm text-secondary-500 dark:text-secondary-400 space-y-2 transition-colors duration-300">
+                <li *ngFor="let feature of service.features; let j = index"
+                    class="flex items-center justify-start animate-fade-in-right"
+                    [style.animation-delay]="(0.5 + j * 0.1) + 's'">
+                  <div class="w-5 h-5 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="font-medium">{{ feature }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Enhanced CTA -->
+            <div class="pt-6">
+              <a routerLink="/services" class="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-1 text-sm">
+                <span>Learn More</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="text-center mt-12">
-      <a routerLink="/services" class="btn-primary">
-        View All Services
-      </a>
+    <!-- Enhanced Bottom CTA -->
+    <div class="text-center">
+      <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
+        <a routerLink="/services" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 text-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+          </svg>
+          <span>View All Services</span>
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="group inline-flex items-center px-8 py-4 bg-white/80 dark:bg-secondary-700/80 hover:bg-white dark:hover:bg-secondary-600 text-secondary-800 dark:text-white font-semibold rounded-xl border border-secondary-200 dark:border-secondary-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+          </svg>
+          <span>Get Free Consultation</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Why Choose Us Section -->
-<section class="section-padding bg-white">
-  <div class="container-custom">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <h2 class="text-3xl lg:text-4xl font-bold text-secondary-800 mb-6">
-          Why Choose {{ companyName }}?
-        </h2>
-        <p class="text-xl text-secondary-600 mb-8">
-          We combine expertise, technology, and personalized service to deliver exceptional results for our clients.
-        </p>
+<section class="section-padding section-light transition-colors duration-500 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5 dark:opacity-10">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-100 via-transparent to-accent-100 dark:from-primary-900 dark:to-accent-900"></div>
+  </div>
 
-        <div class="space-y-6">
-          <div class="flex items-start">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+  <div class="container-custom relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div class="animate-fade-in-left">
+        <!-- Section Header -->
+        <div class="mb-12">
+          <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-600 dark:text-primary-400 text-sm font-medium mb-4 transition-colors duration-300">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Why Choose Us
+          </div>
+          <h2 class="text-3xl lg:text-5xl font-bold text-secondary-800 dark:text-white mb-6 leading-tight transition-colors duration-300">
+            Why Choose <span class="text-gradient bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">{{ companyName }}</span>?
+          </h2>
+          <p class="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">
+            We combine expertise, technology, and personalized service to deliver exceptional results for our clients.
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <div class="group flex items-start p-6 bg-white/50 dark:bg-secondary-800/50 backdrop-blur-sm rounded-2xl border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style="animation-delay: 0.1s;">
+            <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-500 rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-secondary-800 mb-2">Certified Expertise</h3>
-              <p class="text-secondary-600">Licensed Chartered Accountants with extensive experience in tax, audit, and business advisory services.</p>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-secondary-800 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">Certified Expertise</h3>
+              <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Licensed Chartered Accountants with extensive experience in tax, audit, and business advisory services.</p>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+          <div class="group flex items-start p-6 bg-white/50 dark:bg-secondary-800/50 backdrop-blur-sm rounded-2xl border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="w-14 h-14 bg-gradient-to-br from-accent-500 to-accent-600 dark:from-accent-400 dark:to-accent-500 rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
               </svg>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-secondary-800 mb-2">Technology-Driven</h3>
-              <p class="text-secondary-600">Modern tools and software to ensure accuracy, efficiency, and real-time reporting for all your financial needs.</p>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-secondary-800 dark:text-white mb-3 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-300">Technology-Driven</h3>
+              <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Modern tools and software to ensure accuracy, efficiency, and real-time reporting for all your financial needs.</p>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+          <div class="group flex items-start p-6 bg-white/50 dark:bg-secondary-800/50 backdrop-blur-sm rounded-2xl border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="w-14 h-14 bg-gradient-to-br from-secondary-500 to-secondary-600 dark:from-secondary-400 dark:to-secondary-500 rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-secondary-800 mb-2">Personalized Service</h3>
-              <p class="text-secondary-600">Dedicated account managers who understand your business and provide customized solutions for your unique requirements.</p>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-secondary-800 dark:text-white mb-3 group-hover:text-secondary-600 dark:group-hover:text-secondary-400 transition-colors duration-300">Personalized Service</h3>
+              <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Dedicated account managers who understand your business and provide customized solutions for your unique requirements.</p>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+          <div class="group flex items-start p-6 bg-white/50 dark:bg-secondary-800/50 backdrop-blur-sm rounded-2xl border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style="animation-delay: 0.4s;">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 dark:from-green-400 dark:to-green-500 rounded-xl flex items-center justify-center mr-5 flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-secondary-800 mb-2">Proven Track Record</h3>
-              <p class="text-secondary-600">Over 15 years of successful client relationships with a 98% satisfaction rate and numerous success stories.</p>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-secondary-800 dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Proven Track Record</h3>
+              <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Over 15 years of successful client relationships with a 98% satisfaction rate and numerous success stories.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="relative">
-        <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
+      <div class="relative animate-fade-in-right">
+        <!-- Decorative Elements -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-200 to-accent-200 dark:from-primary-800 dark:to-accent-800 rounded-full opacity-20 animate-pulse-slow"></div>
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-accent-200 to-primary-200 dark:from-accent-800 dark:to-primary-800 rounded-full opacity-20 animate-pulse-slow" style="animation-delay: 1s;"></div>
+
+        <!-- Main Stats Container -->
+        <div class="relative bg-gradient-to-br from-white via-primary-50/50 to-accent-50/50 dark:from-secondary-800 dark:via-primary-900/20 dark:to-accent-900/20 rounded-3xl p-8 shadow-2xl shadow-primary-500/10 dark:shadow-primary-400/10 border border-primary-100/50 dark:border-primary-800/50 backdrop-blur-sm transition-all duration-500">
+          <!-- Header -->
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary-800 dark:text-white mb-2 transition-colors duration-300">Our Impact</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 text-sm transition-colors duration-300">Numbers that speak for themselves</p>
+          </div>
+
+          <!-- Stats Grid -->
           <div class="grid grid-cols-2 gap-6">
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-primary-600">500+</div>
-              <div class="text-sm text-secondary-600">Happy Clients</div>
+            <div class="group text-center p-6 bg-white/80 dark:bg-secondary-700/50 rounded-2xl shadow-lg hover:shadow-xl border border-primary-100/50 dark:border-primary-800/30 hover:-translate-y-2 transition-all duration-500 animate-scale-in" style="animation-delay: 0.1s;">
+              <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-500 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2 transition-colors duration-300 animate-pulse-slow">500+</div>
+              <div class="text-sm font-medium text-secondary-600 dark:text-secondary-300 transition-colors duration-300">Happy Clients</div>
             </div>
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-primary-600">15+</div>
-              <div class="text-sm text-secondary-600">Years Experience</div>
+
+            <div class="group text-center p-6 bg-white/80 dark:bg-secondary-700/50 rounded-2xl shadow-lg hover:shadow-xl border border-accent-100/50 dark:border-accent-800/30 hover:-translate-y-2 transition-all duration-500 animate-scale-in" style="animation-delay: 0.2s;">
+              <div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 dark:from-accent-400 dark:to-accent-500 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div class="text-3xl font-bold text-accent-600 dark:text-accent-400 mb-2 transition-colors duration-300 animate-pulse-slow">15+</div>
+              <div class="text-sm font-medium text-secondary-600 dark:text-secondary-300 transition-colors duration-300">Years Experience</div>
             </div>
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-primary-600">1000+</div>
-              <div class="text-sm text-secondary-600">Tax Returns</div>
+
+            <div class="group text-center p-6 bg-white/80 dark:bg-secondary-700/50 rounded-2xl shadow-lg hover:shadow-xl border border-secondary-100/50 dark:border-secondary-800/30 hover:-translate-y-2 transition-all duration-500 animate-scale-in" style="animation-delay: 0.3s;">
+              <div class="w-12 h-12 bg-gradient-to-br from-secondary-500 to-secondary-600 dark:from-secondary-400 dark:to-secondary-500 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div class="text-3xl font-bold text-secondary-600 dark:text-secondary-400 mb-2 transition-colors duration-300 animate-pulse-slow">1000+</div>
+              <div class="text-sm font-medium text-secondary-600 dark:text-secondary-300 transition-colors duration-300">Tax Returns</div>
             </div>
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-primary-600">98%</div>
-              <div class="text-sm text-secondary-600">Satisfaction</div>
+
+            <div class="group text-center p-6 bg-white/80 dark:bg-secondary-700/50 rounded-2xl shadow-lg hover:shadow-xl border border-green-100/50 dark:border-green-800/30 hover:-translate-y-2 transition-all duration-500 animate-scale-in" style="animation-delay: 0.4s;">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 dark:from-green-400 dark:to-green-500 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2 transition-colors duration-300 animate-pulse-slow">98%</div>
+              <div class="text-sm font-medium text-secondary-600 dark:text-secondary-300 transition-colors duration-300">Satisfaction</div>
             </div>
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="mt-8 text-center">
+            <a routerLink="/about" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-1">
+              <span>Learn More About Us</span>
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -205,47 +438,356 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="section-padding bg-secondary-50">
-  <div class="container-custom">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-secondary-800 mb-4">
-        What Our Clients Say
+<section class="section-padding bg-gradient-to-br from-secondary-900 via-primary-900 to-accent-900 text-white relative overflow-hidden">
+  <!-- Background Effects -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-800/20 via-transparent to-accent-800/20"></div>
+    <div class="absolute top-20 left-20 w-64 h-64 bg-primary-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-80 h-80 bg-accent-600/10 rounded-full blur-3xl"></div>
+    <!-- Floating Particles -->
+    <div class="absolute top-32 left-32 w-2 h-2 bg-accent-400 rounded-full opacity-60 animate-float"></div>
+    <div class="absolute top-64 right-48 w-3 h-3 bg-primary-400 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-48 left-48 w-1 h-1 bg-white rounded-full opacity-50 animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <!-- Enhanced Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-300 text-sm font-medium mb-6 border border-white/20">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+        </svg>
+        Client Testimonials
+      </div>
+      <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+        What Our <span class="text-gradient bg-gradient-to-r from-accent-400 to-accent-200 bg-clip-text text-transparent">Clients Say</span>
       </h2>
-      <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
-        Don't just take our word for it - hear from our satisfied clients about their experience with our services
+      <p class="text-xl lg:text-2xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+        Don't just take our word for it - hear from our satisfied clients about their experience with our professional services
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div *ngFor="let testimonial of testimonials" class="card">
-        <div class="flex items-center mb-4">
-          <div class="flex text-accent-400">
-            <svg *ngFor="let star of [1,2,3,4,5]" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-          </div>
+    <!-- Enhanced Testimonial Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div *ngFor="let testimonial of testimonials; let i = index"
+           class="group relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up overflow-hidden"
+           [style.animation-delay]="(0.2 + i * 0.1) + 's'">
+
+        <!-- Background Glow -->
+        <div class="absolute inset-0 bg-gradient-to-br from-accent-500/10 to-primary-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Quote Icon -->
+        <div class="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
         </div>
 
-        <blockquote class="text-secondary-600 mb-6 italic">
-          "{{ testimonial.text }}"
-        </blockquote>
-
-        <div class="flex items-center">
-          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
-            <span class="text-primary-600 font-semibold">{{ testimonial.name.charAt(0) }}</span>
+        <div class="relative z-10">
+          <!-- Star Rating -->
+          <div class="flex items-center mb-6">
+            <div class="flex text-accent-400 mr-3">
+              <svg *ngFor="let star of [1,2,3,4,5]" class="w-5 h-5 hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <span class="text-accent-300 text-sm font-medium">5.0 Rating</span>
           </div>
-          <div>
-            <div class="font-semibold text-secondary-800">{{ testimonial.name }}</div>
-            <div class="text-sm text-secondary-500">{{ testimonial.company }}</div>
+
+          <!-- Testimonial Text -->
+          <blockquote class="text-white/90 mb-8 text-lg leading-relaxed font-medium relative">
+            <span class="text-6xl text-accent-400/30 absolute -top-4 -left-2 font-serif">"</span>
+            <span class="relative z-10">{{ testimonial.text }}</span>
+            <span class="text-6xl text-accent-400/30 absolute -bottom-8 -right-2 font-serif">"</span>
+          </blockquote>
+
+          <!-- Client Info -->
+          <div class="flex items-center">
+            <div class="relative mr-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg border-2 border-white/20">
+                {{ testimonial.name.charAt(0) }}
+              </div>
+              <!-- Verification Badge -->
+              <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-accent-500 rounded-full flex items-center justify-center border-2 border-white">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div class="font-bold text-white text-lg">{{ testimonial.name }}</div>
+              <div class="text-primary-200 text-sm font-medium">{{ testimonial.company }}</div>
+              <div class="text-accent-300 text-xs mt-1">Verified Client</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="text-center mt-12">
-      <a routerLink="/about" class="btn-outline">
-        Read More Reviews
-      </a>
+    <!-- Enhanced Bottom CTA -->
+    <div class="text-center">
+      <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
+        <a routerLink="/about" class="group inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 text-lg backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <span>Read More Reviews</span>
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-accent-500/25 hover:-translate-y-1 text-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+          <span>Share Your Experience</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Knowledge Hub Section -->
+<section class="section-padding bg-gradient-to-br from-white via-primary-50/30 to-accent-50/30 dark:from-secondary-900 dark:via-primary-900/20 dark:to-accent-900/20 transition-colors duration-500 relative overflow-hidden">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 opacity-5 dark:opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-100 via-transparent to-accent-100 dark:from-primary-900 dark:to-accent-900"></div>
+    <div class="absolute top-32 left-32 w-48 h-48 bg-primary-200 dark:bg-primary-800 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-32 right-32 w-64 h-64 bg-accent-200 dark:bg-accent-800 rounded-full blur-3xl"></div>
+    <!-- Floating Elements -->
+    <div class="absolute top-20 left-20 w-3 h-3 bg-accent-400 rounded-full opacity-60 animate-float"></div>
+    <div class="absolute top-48 right-48 w-2 h-2 bg-primary-400 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 left-48 w-4 h-4 bg-secondary-400 rounded-full opacity-30 animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <!-- Enhanced Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-600 dark:text-primary-400 text-sm font-medium mb-6 transition-colors duration-300">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+        </svg>
+        Knowledge Hub
+      </div>
+      <h2 class="text-4xl lg:text-6xl font-bold text-secondary-800 dark:text-white mb-6 leading-tight transition-colors duration-300">
+        Expert <span class="text-gradient bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Financial Insights</span>
+      </h2>
+      <p class="text-xl lg:text-2xl text-secondary-600 dark:text-secondary-300 max-w-4xl mx-auto leading-relaxed transition-colors duration-300">
+        Access comprehensive resources, tools, and expert insights to make informed financial decisions for your business
+      </p>
+    </div>
+
+    <!-- Knowledge Hub Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <!-- Blog & Insights -->
+      <div class="group relative bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-400/10 transition-all duration-500 hover:-translate-y-3 animate-fade-in-up overflow-hidden" style="animation-delay: 0.1s;">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/50 dark:from-blue-900/20 dark:to-blue-800/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-300 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center">
+          <!-- Enhanced Icon -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white text-4xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border-4 border-white dark:border-secondary-700">
+              📝
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Blog & Insights</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Expert insights and industry updates from our chartered accountants</p>
+
+            <!-- Stats -->
+            <div class="flex items-center justify-center space-x-4 text-sm text-secondary-500 dark:text-secondary-400">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                45+ Articles
+              </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-6">
+              <a routerLink="/knowledge/blog" class="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1 text-sm">
+                <span>Read Articles</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources & Downloads -->
+      <div class="group relative bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-2xl hover:shadow-green-500/10 dark:hover:shadow-green-400/10 transition-all duration-500 hover:-translate-y-3 animate-fade-in-up overflow-hidden" style="animation-delay: 0.2s;">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-green-100/50 dark:from-green-900/20 dark:to-green-800/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute -top-2 -right-2 w-4 h-4 bg-green-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-green-300 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center">
+          <!-- Enhanced Icon -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-2xl flex items-center justify-center text-white text-4xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border-4 border-white dark:border-secondary-700">
+              📚
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Resources & Downloads</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Comprehensive guides, checklists, and templates for your financial needs</p>
+
+            <!-- Stats -->
+            <div class="flex items-center justify-center space-x-4 text-sm text-secondary-500 dark:text-secondary-400">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"></path>
+                </svg>
+                28+ Resources
+              </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-6">
+              <a routerLink="/knowledge/resources" class="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25 hover:-translate-y-1 text-sm">
+                <span>Download Resources</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Financial Calculators -->
+      <div class="group relative bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-2xl hover:shadow-purple-500/10 dark:hover:shadow-purple-400/10 transition-all duration-500 hover:-translate-y-3 animate-fade-in-up overflow-hidden" style="animation-delay: 0.3s;">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-purple-100/50 dark:from-purple-900/20 dark:to-purple-800/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute -top-2 -right-2 w-4 h-4 bg-purple-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-300 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center">
+          <!-- Enhanced Icon -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-2xl flex items-center justify-center text-white text-4xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border-4 border-white dark:border-secondary-700">
+              🧮
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Financial Calculators</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Interactive tools to help you make informed financial decisions</p>
+
+            <!-- Stats -->
+            <div class="flex items-center justify-center space-x-4 text-sm text-secondary-500 dark:text-secondary-400">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                12+ Calculators
+              </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-6">
+              <a routerLink="/knowledge/calculators" class="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-1 text-sm">
+                <span>Use Calculators</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Webinars & Events -->
+      <div class="group relative bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-200/50 dark:border-secondary-700/50 hover:shadow-2xl hover:shadow-orange-500/10 dark:hover:shadow-orange-400/10 transition-all duration-500 hover:-translate-y-3 animate-fade-in-up overflow-hidden" style="animation-delay: 0.4s;">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-orange-100/50 dark:from-orange-900/20 dark:to-orange-800/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute -top-2 -right-2 w-4 h-4 bg-orange-400 rounded-full opacity-60 animate-float"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-300 rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center">
+          <!-- Enhanced Icon -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-2xl flex items-center justify-center text-white text-4xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border-4 border-white dark:border-secondary-700">
+              🎥
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">Webinars & Events</h3>
+            <p class="text-secondary-600 dark:text-secondary-300 leading-relaxed transition-colors duration-300">Educational sessions and live events with industry experts</p>
+
+            <!-- Stats -->
+            <div class="flex items-center justify-center space-x-4 text-sm text-secondary-500 dark:text-secondary-400">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M15 10a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 012.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 00.178.643l2.457 2.457a.678.678 0 00.644.178l2.189-.547a1.745 1.745 0 011.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 01-7.01-4.42 18.634 18.634 0 01-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" clip-rule="evenodd"></path>
+                </svg>
+                18+ Sessions
+              </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-6">
+              <a routerLink="/knowledge/webinars" class="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-1 text-sm">
+                <span>Join Webinars</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Bottom CTA -->
+    <div class="text-center">
+      <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
+        <a routerLink="/knowledge" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 text-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+          <span>Explore Knowledge Hub</span>
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="group inline-flex items-center px-8 py-4 bg-white/80 dark:bg-secondary-700/80 hover:bg-white dark:hover:bg-secondary-600 text-secondary-800 dark:text-white font-semibold rounded-xl border border-secondary-200 dark:border-secondary-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Ask Our Experts</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

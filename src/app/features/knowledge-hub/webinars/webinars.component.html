@@ -1,0 +1,93 @@
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 dark:from-primary-800 dark:via-primary-900 dark:to-secondary-900 text-white py-20 lg:py-32 transition-all duration-500">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-white bg-opacity-5"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <div class="text-center animate-fade-in-up">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center justify-center space-x-2 text-primary-200">
+          <li><a routerLink="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li><a routerLink="/knowledge" class="hover:text-white transition-colors">Knowledge Hub</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-white">Webinars</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl lg:text-6xl font-bold mb-6">🎥 Webinars & Events</h1>
+      <p class="text-xl lg:text-2xl text-primary-100 max-w-3xl mx-auto">
+        Educational sessions and live events with industry experts
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Webinars Grid -->
+<section class="section-padding bg-white dark:bg-secondary-900 transition-colors duration-500">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let webinar of webinars; let i = index"
+           class="card hover-lift animate-fade-in-up"
+           [style.animation-delay]="(0.1 + i * 0.1) + 's'">
+
+        <!-- Webinar Thumbnail -->
+        <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg mb-6 flex items-center justify-center text-white text-4xl">
+          {{ webinar.thumbnail }}
+        </div>
+
+        <!-- Webinar Content -->
+        <div class="space-y-4">
+          <!-- Status Badge -->
+          <div class="flex items-center justify-between">
+            <span [class]="getStatusColor(webinar.status)" class="px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300">
+              {{ webinar.status | titlecase }}
+            </span>
+            <span class="text-sm text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+              {{ webinar.duration }}
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-bold text-secondary-800 dark:text-white transition-colors duration-300">
+            {{ webinar.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+            {{ webinar.description }}
+          </p>
+
+          <!-- Speaker & Date -->
+          <div class="space-y-2">
+            <div class="flex items-center text-sm text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+              </svg>
+              {{ webinar.speaker }}
+            </div>
+            <div class="flex items-center text-sm text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              {{ webinar.date | date:'MMM dd, yyyy' }}
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button *ngIf="webinar.status === 'upcoming'" class="w-full btn-primary">
+            Register Now
+          </button>
+          <button *ngIf="webinar.status === 'live'" class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+            Join Live
+          </button>
+          <button *ngIf="webinar.status === 'recorded'" class="w-full btn-outline">
+            Watch Recording
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 dark:from-primary-800 dark:via-primary-900 dark:to-secondary-900 text-white py-20 lg:py-32 transition-all duration-500">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-white bg-opacity-5"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <div class="text-center animate-fade-in-up">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center justify-center space-x-2 text-primary-200">
+          <li><a routerLink="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li><a routerLink="/knowledge" class="hover:text-white transition-colors">Knowledge Hub</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-white">Calculators</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl lg:text-6xl font-bold mb-6">🧮 Financial Calculators</h1>
+      <p class="text-xl lg:text-2xl text-primary-100 max-w-3xl mx-auto">
+        Interactive tools to help you make informed financial decisions
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Calculators Grid -->
+<section class="section-padding bg-white dark:bg-secondary-900 transition-colors duration-500">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let calculator of calculators; let i = index"
+           class="card hover-lift animate-fade-in-up"
+           [style.animation-delay]="(0.1 + i * 0.1) + 's'">
+
+        <!-- Calculator Icon -->
+        <div class="text-center mb-6">
+          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg">
+            {{ calculator.icon }}
+          </div>
+        </div>
+
+        <!-- Calculator Content -->
+        <div class="text-center space-y-4">
+          <!-- Popular Badge -->
+          <div *ngIf="calculator.popular" class="inline-block px-3 py-1 bg-accent-500 text-white rounded-full text-sm font-medium">
+            ⭐ Popular
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-bold text-secondary-800 dark:text-white transition-colors duration-300">
+            {{ calculator.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+            {{ calculator.description }}
+          </p>
+
+          <!-- Category -->
+          <div class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm transition-colors duration-300">
+            {{ calculator.category }}
+          </div>
+
+          <!-- Use Calculator Button -->
+          <button class="w-full btn-primary mt-6">
+            Use Calculator
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

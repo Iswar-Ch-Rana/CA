@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ConfigService } from '../../core/services/config.service';
+import { ThemeToggleComponent } from '../../shared/components/theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ThemeToggleComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

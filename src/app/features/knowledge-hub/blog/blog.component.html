@@ -1,0 +1,167 @@
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 dark:from-primary-800 dark:via-primary-900 dark:to-secondary-900 text-white py-20 lg:py-32 transition-all duration-500">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-white bg-opacity-5"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <div class="text-center animate-fade-in-up">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center justify-center space-x-2 text-primary-200">
+          <li><a routerLink="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li><a routerLink="/knowledge" class="hover:text-white transition-colors">Knowledge Hub</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-white">Blog</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl lg:text-6xl font-bold mb-6">📝 Expert Insights & Blog</h1>
+      <p class="text-xl lg:text-2xl text-primary-100 max-w-3xl mx-auto">
+        Stay informed with the latest financial insights, tax updates, and expert advice from {{ companyName }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Category Filter -->
+<section class="section-padding bg-white dark:bg-secondary-900 transition-colors duration-500">
+  <div class="container-custom">
+    <div class="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
+      <button *ngFor="let category of categories"
+              (click)="filterByCategory(category.id)"
+              [class]="selectedCategory === category.id ?
+                'bg-primary-600 text-white' :
+                'bg-secondary-100 dark:bg-secondary-700 text-secondary-700 dark:text-secondary-300 hover:bg-primary-100 dark:hover:bg-primary-900/30'"
+              class="px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+        {{ category.name }} ({{ category.count }})
+      </button>
+    </div>
+
+    <!-- Featured Posts -->
+    <div *ngIf="selectedCategory === 'all'" class="mb-16">
+      <h2 class="text-3xl font-bold text-secondary-800 dark:text-white mb-8 text-center transition-colors duration-300">
+        Featured Articles
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div *ngFor="let post of featuredPosts; let i = index"
+             class="card hover-lift animate-fade-in-up"
+             [style.animation-delay]="(0.2 + i * 0.1) + 's'">
+
+          <!-- Featured Badge -->
+          <div class="absolute top-4 left-4 bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+            ⭐ Featured
+          </div>
+
+          <!-- Post Image -->
+          <div class="h-48 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg mb-6 flex items-center justify-center text-white text-4xl">
+            📝
+          </div>
+
+          <!-- Post Content -->
+          <div class="space-y-4">
+            <!-- Category & Date -->
+            <div class="flex items-center justify-between text-sm">
+              <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full transition-colors duration-300">
+                {{ getCategoryDisplayName(post.category) }}
+              </span>
+              <span class="text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+                {{ formatDate(post.publishedAt || post.createdAt) }}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-secondary-800 dark:text-white transition-colors duration-300">
+              {{ post.title }}
+            </h3>
+
+            <!-- Excerpt -->
+            <p class="text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+              {{ post.excerpt }}
+            </p>
+
+            <!-- Meta Info -->
+            <div class="flex items-center justify-between pt-4 border-t border-secondary-200 dark:border-secondary-700 transition-colors duration-300">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
+                  <span class="text-primary-600 dark:text-primary-400 text-sm font-medium">
+                    {{ getAuthorInitials(post) }}
+                  </span>
+                </div>
+                <span class="text-sm text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+                  {{ getAuthorName(post) }}
+                </span>
+              </div>
+              <span class="text-sm text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+                {{ post.readingTime }} min read
+              </span>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+              <span *ngFor="let tag of post.tags"
+                    class="px-2 py-1 bg-secondary-100 dark:bg-secondary-700 text-secondary-600 dark:text-secondary-300 text-xs rounded transition-colors duration-300">
+                {{ tag }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Posts Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let post of filteredPosts; let i = index"
+           class="card hover-lift animate-fade-in-up"
+           [style.animation-delay]="(0.1 + i * 0.05) + 's'">
+
+        <!-- Post Image -->
+        <div class="h-40 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg mb-4 flex items-center justify-center text-white text-3xl">
+          📝
+        </div>
+
+        <!-- Post Content -->
+        <div class="space-y-3">
+          <!-- Category & Date -->
+          <div class="flex items-center justify-between text-sm">
+            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full transition-colors duration-300">
+              {{ getCategoryDisplayName(post.category) }}
+            </span>
+            <span class="text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+              {{ formatDate(post.publishedAt || post.createdAt) }}
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-lg font-semibold text-secondary-800 dark:text-white transition-colors duration-300">
+            {{ post.title }}
+          </h3>
+
+          <!-- Excerpt -->
+          <p class="text-secondary-600 dark:text-secondary-300 text-sm transition-colors duration-300">
+            {{ post.excerpt.substring(0, 120) }}...
+          </p>
+
+          <!-- Meta Info -->
+          <div class="flex items-center justify-between pt-3 border-t border-secondary-200 dark:border-secondary-700 transition-colors duration-300">
+            <span class="text-xs text-secondary-600 dark:text-secondary-300 transition-colors duration-300">
+              {{ getAuthorName(post) }}
+            </span>
+            <span class="text-xs text-secondary-500 dark:text-secondary-400 transition-colors duration-300">
+              {{ post.readingTime }} min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12">
+      <button class="btn-outline">
+        Load More Articles
+      </button>
+    </div>
+  </div>
+</section>
